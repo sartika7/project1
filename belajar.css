@@ -1,7 +1,118 @@
-h1{
- color: skyblue; 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  min-height: 100vh;
 }
 
-nav {
-    background-color:aquamarine
+/* --- NAVBAR INSTAGRAM --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(10px); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 60px;
+}
+
+/* Pembagian 3 Kolom: Kiri, Tengah, Kanan */
+.nav-left, .nav-center, .nav-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.nav-left { justify-content: flex-start; }
+.nav-center { justify-content: center; } /* Menengahkan tombol Cari */
+.nav-right { justify-content: flex-end; gap: 20px; }
+
+/* Logo & Tulisan Instagram */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.brand svg {
+  height: 30px;
+  width: auto;
+  fill: white;
+}
+
+.brand-text {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tombol Beranda (di kanan profil) */
+.home-btn {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  gap: 3px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.home-btn svg { 
+  width: 22px; height: 22px; fill: white; 
+}
+
+.icon-btn {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  gap: 2px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Tombol Search (di tengah) */
+.search-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  width: 200px;
+  justify-content: flex-start;
+  transition: all 0.2s ease;
+}
+
+.search-btn:hover { background-color: rgba(255, 255, 255, 0.4); }
+
+/* Profile Picture */
+.profile-pic {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+/* --- KONTEN UTAMA --- */
+.welcome {
+  text-align: center;
+  margin-top: 80px;
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
